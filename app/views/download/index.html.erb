@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html lang="ja"> 
+  <head> 
+    <meta charset="utf-8"> 
+    <title>TM Lib : Editor</title>
+
+    <style>
+
+    </style>
+    <script>
+      var $id = function(id) { return document.getElementById(id); }
+            
+      window.onload = function()
+      {
+        $id("download-link").addEventListener("click", function(){
+          var value = $id("ta").value;
+          var href = "data:application/octet-stream," + encodeURIComponent(value);
+          //var href = "data:application/octet-stream," + "あああ";
+          this.setAttribute("href", href);
+        }, false);
+      }
+    </script>
+
+  </head>
+
+  <body>
+
+    <h1>TM Lib : Download</h1>
+
+    <textarea id="ta" cols="64" rows="16">
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello, world!");
+    return 0;
+}
+    </textarea><br/>
+    <a id="download-link" href="#">Download</a>
+
+  </body>
+</html>

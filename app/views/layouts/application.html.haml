@@ -1,0 +1,10 @@
+!!! XML
+!!!
+%html
+  %head
+    %meta{ 'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=utf-8' }
+    %title Canvas 
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+  %body
+    = yield

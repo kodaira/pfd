@@ -1,0 +1,18 @@
+=link_to 'Top', :controller => 'top'
+%h2 インポート＆エクスポート 
+
+%form
+  #fm
+    %input{:onclick => 'onCircle()', :type => 'button', :value => 'Circle'}
+
+#screen{:style => 'background: silver; height: 300px; width: 500px;'}
+
+%p
+  %a{:id => 'export', :href => '#'}
+    エクスポート
+
+%p
+  %input{:id => 'import', :type => 'file'}
+
+%p
+  %input{:onclick => 'onInitData()', :type => 'button', :value => 'データ初期化'}
